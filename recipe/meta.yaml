@@ -47,7 +47,7 @@ requirements:
 
 test:
   imports:
-    - devbio
+    - devbio_napari
   commands:
     - pip list
     # - pip check
