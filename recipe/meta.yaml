@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -21,15 +21,13 @@ requirements:
   run:
     - napari-3d-ortho-viewer
     - napari-accelerated-pixel-and-object-classification
-    - napari-aicsimageio
     - napari-animation
     - napari-brightness-contrast
     - napari-clusters-plotter
     - napari-crop
     - napari-curtain
     - napari-folder-browser
-    - napari-itk-io
-    - napari-ome-zarr
+    - napari-layer-details-display
     - napari-plot-profile
     - napari-plugin-engine >=0.1.4
     - napari-plugin-search
