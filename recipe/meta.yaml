@@ -27,6 +27,7 @@ requirements:
     - napari-crop
     - napari-curtain
     - napari-folder-browser
+    - napari-layer-details-display
     - napari-plot-profile
     - napari-plugin-engine >=0.1.4
     - napari-plugin-search
