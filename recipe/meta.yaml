@@ -42,7 +42,7 @@ requirements:
     - python >=3.7
     - redlionfish
     - napari-tools-menu
-    - vispy<=0.9.6
+    - vispy <=0.9.6
 
 test:
   imports:
