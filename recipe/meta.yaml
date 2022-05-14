@@ -37,6 +37,7 @@ requirements:
     - napari-skimage-regionprops
     - napari-tabu
     - napari-workflow-optimizer
+    - napari-workflow-inspector
     - numpy >=1.21.4
     - platymatch
     - python >=3.7
