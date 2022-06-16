@@ -1,5 +1,5 @@
 {% set name = "devbio-napari" %}
-{% set version = "0.5.5" %}
+{% set version = "0.5.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/devbio-napari-{{ version }}.tar.gz
-  sha256: 31faee08fc4c3cd4b1e47dd019c3c6b9dedc3ad6df8e052a7fff01116f4d3392
+  sha256: 3854ed5f3cfeb4766eec89cd8d2ad44c25833187c40b7dbbda407d113fa8ec49
 
 build:
   noarch: python
@@ -19,6 +19,9 @@ requirements:
     - pip
     - python >=3.7
   run:
+    - napari <=0.4.15
+    - napari-time-slicer
+    - napari-workflows
     - napari-3d-ortho-viewer
     - napari-accelerated-pixel-and-object-classification
     - napari-animation
@@ -44,6 +47,9 @@ requirements:
     - redlionfish
     - napari-tools-menu
     - vispy <=0.9.6
+    - napari-mouse-controls
+    - napari-blob-detection
+    - the-segmentation-game
 
 test:
   imports:
