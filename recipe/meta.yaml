@@ -19,6 +19,9 @@ requirements:
     - pip
     - python >=3.7
   run:
+    - napari <=0.4.15
+    - napari-time-slicer
+    - napari-workflows
     - napari-3d-ortho-viewer
     - napari-accelerated-pixel-and-object-classification
     - napari-animation
@@ -44,6 +47,8 @@ requirements:
     - redlionfish
     - napari-tools-menu
     - vispy <=0.9.6
+    - napari-mouse-controls
+    - napari-napari-blob-detection
 
 test:
   imports:
