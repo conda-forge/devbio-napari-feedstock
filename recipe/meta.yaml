@@ -48,7 +48,7 @@ requirements:
     - napari-tools-menu
     - vispy <=0.9.6
     - napari-mouse-controls
-    - napari-napari-blob-detection
+    - napari-blob-detection
 
 test:
   imports:
