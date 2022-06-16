@@ -49,6 +49,7 @@ requirements:
     - vispy <=0.9.6
     - napari-mouse-controls
     - napari-blob-detection
+    - the-segmentation-game
 
 test:
   imports:
