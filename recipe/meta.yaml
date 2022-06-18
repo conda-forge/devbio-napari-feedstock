@@ -1,5 +1,5 @@
 {% set name = "devbio-napari" %}
-{% set version = "0.5.6" %}
+{% set version = "0.5.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/devbio-napari-{{ version }}.tar.gz
-  sha256: 3854ed5f3cfeb4766eec89cd8d2ad44c25833187c40b7dbbda407d113fa8ec49
+  sha256: b9fb04c32e2f13ede09287377bac9862ff265c0a4ad62a659ca574e896857683
 
 build:
   noarch: python
@@ -50,6 +50,8 @@ requirements:
     - napari-mouse-controls
     - napari-blob-detection
     - the-segmentation-game
+    - jupyterlab
+    - cellpose-napari
 
 test:
   imports:
