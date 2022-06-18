@@ -50,6 +50,8 @@ requirements:
     - napari-mouse-controls
     - napari-blob-detection
     - the-segmentation-game
+    - jupyterlab
+    - cellpose-napari
 
 test:
   imports:
