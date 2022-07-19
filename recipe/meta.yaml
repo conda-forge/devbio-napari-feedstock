@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -52,6 +52,7 @@ requirements:
     - the-segmentation-game
     - jupyterlab
     - cellpose-napari
+    - napari-czifile2
 
 test:
   imports:
