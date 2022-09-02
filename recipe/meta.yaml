@@ -1,5 +1,5 @@
 {% set name = "devbio-napari" %}
-{% set version = "0.5.10" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/devbio-napari-{{ version }}.tar.gz
-  sha256: 213c870cdcb981531a87b875fcb2cd8dbf0d3e7122fc0894655955ac197b773f
+  sha256: 12cc8bce8380473f7bd5c7faf083d88dc313cc961fa2bf3b9744fa0f785c714e
 
 build:
   noarch: python
@@ -53,6 +53,9 @@ requirements:
     - jupyterlab
     - cellpose-napari
     - napari-czifile2
+    - napari-roi
+    - pydantic !=1.10.0
+    - napari-pystackreg
 
 test:
   imports:
