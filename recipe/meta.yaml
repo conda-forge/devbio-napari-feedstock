@@ -53,6 +53,9 @@ requirements:
     - jupyterlab
     - cellpose-napari
     - napari-czifile2
+    - napari-roi
+    - pydantic !=1.10.0
+    - napari-pystackreg
 
 test:
   imports:
