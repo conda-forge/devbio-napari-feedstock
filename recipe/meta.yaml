@@ -12,11 +12,12 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . -vv
   number: 1
+  skip: true  # [py<37]
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python
   run:
     - ocl-icd-system  # [linux]
     - ocl_icd_wrapper_apple  # [osx]
@@ -44,7 +45,7 @@ requirements:
     - napari-workflow-inspector
     - numpy >=1.21.4
     - platymatch
-    - python >=3.7
+    - python
     - redlionfish
     - napari-tools-menu
     - vispy <=0.9.6
