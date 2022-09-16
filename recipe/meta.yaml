@@ -19,6 +19,8 @@ requirements:
     - pip
     - python >=3.7
   run:
+    - ocl-icd-system  # [linux]
+    - ocl_icd_wrapper_apple  # [osx]
     - napari <=0.4.15
     - napari-time-slicer
     - napari-workflows
