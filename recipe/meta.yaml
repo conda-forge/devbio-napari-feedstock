@@ -57,7 +57,6 @@ requirements:
     - napari-blob-detection
     - the-segmentation-game
     - jupyterlab
-    - cellpose-napari
     - napari-czifile2
     - napari-roi
     - pydantic !=1.10.0
