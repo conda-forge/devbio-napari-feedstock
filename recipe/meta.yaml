@@ -19,10 +19,10 @@ requirements:
     - pip
     - python >=3.8
   run:
-    {% if __linux %}
+    {% if target_os == "linux %}
     - ocl-icd-system
     {% endif %}
-    {% if __osx %}
+    {% if target_os == "osx" %}
     - ocl_icd_wrapper_apple
     {% endif %}
     - napari <=0.4.15
