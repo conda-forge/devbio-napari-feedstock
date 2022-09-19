@@ -1,8 +1,5 @@
 {% set name = "devbio-napari" %}
 {% set version = "0.6.0" %}
-
-# note that build number must be < 3 to avoid conflicts
-# (see the build number calculation below)
 {% set build_number = 1 %}
 
 package:
@@ -16,20 +13,11 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  {% if noarch_platform == 'linux' %}
-  number: {{ build_number | int * 3 }}
-  {% else %}
-  {% if noarch_platform == 'osx' %}
-  number: {{ build_number | int * 3 + 1 }}
-  {% else %}
-  {% if noarch_platform == 'windows' %}
-  number: {{ build_number | int * 3 + 2 }}
-  {% else %}
-  number: build_number
-  {% endif %}
-  {% endif %}
-  {% endif %}
-
+  number: {{ build_number }}
+  string: linux_{{ build_number }}  # [linux]
+  string: osx_{{ build_number }}  # [osx]
+  string: win_{{ build_number }}   # [win]
+  
 requirements:
   host:
     - pip
