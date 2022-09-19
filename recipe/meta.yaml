@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.8
   run:
     {% if __linux %}
     - ocl-icd-system
@@ -49,7 +49,7 @@ requirements:
     - napari-workflow-inspector
     - numpy >=1.21.4
     - platymatch
-    - python
+    - python >=3.8
     - redlionfish
     - napari-tools-menu
     - vispy <=0.9.6
