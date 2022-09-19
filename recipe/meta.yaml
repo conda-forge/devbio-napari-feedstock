@@ -18,9 +18,9 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
   {% if noarch_platform == 'linux' %}
   number: {{ build_number | int * 3 }}
-  {% else if noarch_platfor == 'osx'}
+  {% else if noarch_platfor == 'osx' %}
   number: {{ build_number | int * 3 + 1 }}
-  {% else if noarch_platfor == 'windows'}
+  {% else if noarch_platfor == 'windows' %}
   number: {{ build_number | int * 3 + 2 }}
   {% endif %}
 
