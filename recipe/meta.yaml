@@ -19,10 +19,10 @@ build:
   {% if noarch_platform == 'linux' %}
   number: {{ build_number | int * 3 }}
   {% endif %}
-  {% if noarch_platfor == 'osx' %}
+  {% if noarch_platform == 'osx' %}
   number: {{ build_number | int * 3 + 1 }}
   {% endif %}
-  {% if noarch_platfor == 'windows' %}
+  {% if noarch_platform == 'windows' %}
   number: {{ build_number | int * 3 + 2 }}
   {% endif %}
 
