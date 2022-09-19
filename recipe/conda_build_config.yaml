@@ -1,0 +1,5 @@
+# see conda-forge.yaml#/noarch_platforms which controls the platforms
+target_os:
+  - 'windows'  # [win]
+  - 'linux'  # [linux]
+  - 'osx'  # [osx]
