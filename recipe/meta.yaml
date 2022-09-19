@@ -19,11 +19,16 @@ requirements:
     - pip
     - python >=3.8
   run:
-    {% if target_os == 'linux' %}
+    {% if noarch_platform == 'linux' %}
     - ocl-icd-system
+    - __linux
     {% endif %}
-    {% if target_os == 'osx' %}
+    {% if noarch_platform == 'osx' %}
     - ocl_icd_wrapper_apple
+    - __osx
+    {% endif %}
+    {% if noarch_platform == 'windows' %}
+    - __win
     {% endif %}
     - napari <=0.4.15
     - napari-time-slicer
