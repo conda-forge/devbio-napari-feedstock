@@ -14,25 +14,18 @@ build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: {{ build_number }}
-  string: linux_{{ build_number }}  # [linux]
-  string: osx_{{ build_number }}  # [osx]
-  string: win_{{ build_number }}   # [win]
+  string: {{ noarch_platform }}_h{{ PKG_HASH }}_{{ build_number }}
   
 requirements:
   host:
     - pip
     - python >=3.8
   run:
+    - __{{ noarch_platform }}
     {% if noarch_platform == 'linux' %}
     - ocl-icd-system
-    - __linux
-    {% endif %}
-    {% if noarch_platform == 'osx' %}
+    {% elif noarch_platform == 'osx' %}
     - ocl_icd_wrapper_apple
-    - __osx
-    {% endif %}
-    {% if noarch_platform == 'windows' %}
-    - __win
     {% endif %}
     - napari <=0.4.15
     - napari-time-slicer
