@@ -15,6 +15,8 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
   number: {{ build_number }}
   string: {{ noarch_platform }}_h{{ PKG_HASH }}_{{ build_number }}
+  entry_points: 
+    - devbio-napari = devbio_napari:main
   
 requirements:
   host:
