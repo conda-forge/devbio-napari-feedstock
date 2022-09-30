@@ -1,5 +1,6 @@
 {% set name = "devbio-napari" %}
 {% set version = "0.6.0" %}
+{% set build_number = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -12,13 +13,22 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
-
+  number: {{ build_number }}
+  string: {{ noarch_platform }}_h{{ PKG_HASH }}_{{ build_number }}
+  entry_points: 
+    - devbio-napari = devbio_napari:main
+  
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
   run:
+    - __{{ noarch_platform }}
+    {% if noarch_platform == 'linux' %}
+    - ocl-icd-system
+    {% elif noarch_platform == 'osx' %}
+    - ocl_icd_wrapper_apple
+    {% endif %}
     - napari <=0.4.15
     - napari-time-slicer
     - napari-workflows
@@ -43,7 +53,7 @@ requirements:
     - napari-workflow-inspector
     - numpy >=1.21.4
     - platymatch
-    - python >=3.7
+    - python >=3.8
     - redlionfish
     - napari-tools-menu
     - vispy <=0.9.6
@@ -51,7 +61,6 @@ requirements:
     - napari-blob-detection
     - the-segmentation-game
     - jupyterlab
-    - cellpose-napari
     - napari-czifile2
     - napari-roi
     - pydantic !=1.10.0
