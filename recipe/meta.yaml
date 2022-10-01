@@ -54,7 +54,6 @@ requirements:
     - numpy >=1.21.4
     - platymatch
     - python >=3.8
-    - redlionfish
     - napari-tools-menu
     - vispy <=0.9.6
     - napari-mouse-controls
