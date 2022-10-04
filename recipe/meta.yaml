@@ -1,5 +1,5 @@
 {% set name = "devbio-napari" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 {% set build_number = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/devbio-napari-{{ version }}.tar.gz
-  sha256: 826244fb332ca4317d68e85656dd54be151079d4c697f6e58ff281b5d7ef974c
+  sha256: 34d1f9bfb3f89bb170217b688db755af1341d100cbafd6b1a72987541d43ba94
 
 build:
   noarch: python
