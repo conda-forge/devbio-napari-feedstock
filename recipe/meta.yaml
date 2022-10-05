@@ -64,6 +64,7 @@ requirements:
     - napari-roi
     - pydantic !=1.10.0
     - napari-pystackreg
+    - imageio !=2.22.1
 
 test:
   imports:
