@@ -29,7 +29,7 @@ requirements:
     {% elif noarch_platform == 'osx' %}
     - ocl_icd_wrapper_apple
     {% endif %}
-    - napari <=0.4.15
+    - napari
     - napari-time-slicer
     - napari-workflows
     - napari-3d-ortho-viewer
@@ -55,7 +55,7 @@ requirements:
     - platymatch
     - python >=3.8
     - napari-tools-menu
-    - vispy <=0.9.6
+    - vispy
     - napari-mouse-controls
     - napari-blob-detection
     - the-segmentation-game
@@ -65,6 +65,7 @@ requirements:
     - pydantic !=1.10.0
     - napari-pystackreg
     - imageio !=2.22.1
+    - redlionfish
 
 test:
   imports:
