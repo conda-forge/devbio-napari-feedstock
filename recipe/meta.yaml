@@ -1,5 +1,5 @@
 {% set name = "devbio-napari" %}
-{% set version = "0.7.1" %}
+{% set version = "0.8.0" %}
 {% set build_number = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/devbio-napari-{{ version }}.tar.gz
-  sha256: 34d1f9bfb3f89bb170217b688db755af1341d100cbafd6b1a72987541d43ba94
+  sha256: 8d5ba267012624930f571c91238cb74ddfbf225b22e5daa8bd90f6c8cc274c50
 
 build:
   noarch: python
@@ -29,7 +29,7 @@ requirements:
     {% elif noarch_platform == 'osx' %}
     - ocl_icd_wrapper_apple
     {% endif %}
-    - napari <=0.4.15
+    - napari
     - napari-time-slicer
     - napari-workflows
     - napari-3d-ortho-viewer
@@ -55,7 +55,7 @@ requirements:
     - platymatch
     - python >=3.8
     - napari-tools-menu
-    - vispy <=0.9.6
+    - vispy
     - napari-mouse-controls
     - napari-blob-detection
     - the-segmentation-game
@@ -65,6 +65,7 @@ requirements:
     - pydantic !=1.10.0
     - napari-pystackreg
     - imageio !=2.22.1
+    - redlionfish
 
 test:
   imports:
