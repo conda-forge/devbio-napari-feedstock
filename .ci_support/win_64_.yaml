@@ -1,5 +1,6 @@
 channel_sources:
 - conda-forge
+- pytorch
 channel_targets:
 - conda-forge main
 noarch_platform:
