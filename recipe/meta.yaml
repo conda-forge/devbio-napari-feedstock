@@ -36,7 +36,7 @@ requirements:
     - napari-accelerated-pixel-and-object-classification
     - napari-animation
     - napari-brightness-contrast
-    - napari-clusters-plotter
+    - napari-clusters-plotter >=0.7.1
     - napari-crop
     - napari-curtain
     - napari-folder-browser
@@ -67,6 +67,8 @@ requirements:
     - imageio !=2.22.1
     - redlionfish
     - jupyter_server <2.0.0
+    - libxml2 <=2.10.4
+    - seaborn
 
 test:
   imports:
