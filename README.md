@@ -1,11 +1,11 @@
-About devbio-napari
-===================
+About devbio-napari-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/devbio-napari-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/haesleinhuepf/devbio-napari
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/devbio-napari-feedstock/blob/main/LICENSE.txt)
 
 Summary: A bundle of napari plugins useful for 3D+t image processing and analysis for studying developmental biology.
 
