@@ -31,6 +31,7 @@ requirements:
     - ocl_icd_wrapper_apple
     {% endif %}
     - napari
+    - napari-assistant >=0.4.9
     - napari-time-slicer
     - napari-workflows
     - napari-3d-ortho-viewer
