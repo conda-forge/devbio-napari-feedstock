@@ -4,6 +4,6 @@
 # note this needs to be paired with `noarch_platforms` (plural!) on ../conda-forge.yml
 # these keys have been chosen so they match conda's virtual packages for platform (__linux, __osx and __win)
 noarch_platform:
-  - linux  # [linux]
+#  - linux  # [linux]
   - osx  # [osx]
   - win  # [win]
