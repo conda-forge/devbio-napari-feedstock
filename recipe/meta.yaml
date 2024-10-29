@@ -1,6 +1,6 @@
 {% set name = "devbio-napari" %}
 {% set version = "0.10.1" %}
-{% set build_number = 0 %}
+{% set build_number = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -21,7 +21,8 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.9
+    - setuptools
   run:
     - __{{ noarch_platform }}
     {% if noarch_platform == 'linux' %}
@@ -30,6 +31,7 @@ requirements:
     - ocl_icd_wrapper_apple
     {% endif %}
     - napari
+    - napari-assistant >=0.4.9
     - napari-time-slicer
     - napari-workflows
     - napari-3d-ortho-viewer
@@ -43,7 +45,7 @@ requirements:
     - napari-layer-details-display
     - napari-plot-profile
     - napari-plugin-engine >=0.1.4
-    - npe2 <0.7.0
+    - npe2
     - napari-plugin-search
     - napari-pyclesperanto-assistant
     - napari-segment-blobs-and-things-with-membranes
