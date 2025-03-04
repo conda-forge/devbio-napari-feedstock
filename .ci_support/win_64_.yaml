@@ -6,3 +6,5 @@ noarch_platform:
 - win
 pari:
 - 2.15.* *_pthread
+python_min:
+- '3.9'
