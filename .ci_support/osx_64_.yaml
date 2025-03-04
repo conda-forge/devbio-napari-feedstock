@@ -10,3 +10,7 @@ macos_machine:
 - x86_64-apple-darwin13.4.0
 noarch_platform:
 - osx
+pari:
+- 2.15.* *_pthread
+python_min:
+- '3.9'
